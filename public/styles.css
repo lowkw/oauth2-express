@@ -1,0 +1,66 @@
+/* styles.css */
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* General body styling */
+  body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Container for the login and dashboard pages */
+  .container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading styling */
+  h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  a.btn {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  a.btn:hover {
+    background-color: #357ae8;
+    cursor: pointer;
+  }
+  
+  /* For profile page */
+  .profile-info {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .logout-btn {
+    margin-top: 20px;
+  }
+  
