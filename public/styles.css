@@ -1,24 +1,17 @@
 /* styles.css */
-
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
+   
   /* General body styling */
   body {
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: center;    
     padding: 20px;
   }
-  
-  /* Container for the login and dashboard pages */
+    
+  /* Container for the login and profile pages */
   .container {
     background-color: #fff;
     padding: 40px;
@@ -60,7 +53,73 @@
     font-size: 18px;
   }
   
-  .logout-btn {
-    margin-top: 20px;
+  .button-container {
+    display: flex;
+    justify-content: center;  /* Align buttons horizontally in the center */
+    gap: 20px;
+  }
+
+  .button {
+    background-color: #4285f4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .button:hover {
+    color: black;
+    background-color: #4CAF50;;
+    cursor: pointer;
   }
   
+  /* Navigation styles */
+  nav {
+    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul li a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Dropdown menu */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

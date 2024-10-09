@@ -47,10 +47,14 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/login', (req, res) => {
+  res.render('login');
+});
+
 app.get('/auth', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
 app.get('/auth/callback', 
-  passport.authenticate('google', { failureRedirect: '/', failureMessage: true }),
+  passport.authenticate('google', { failureRedirect: '/login', failureMessage: true }),
   (req, res) => {
     res.redirect('/profile');
   }
@@ -60,7 +64,7 @@ app.get('/profile',  (req, res) => {
   if (req.isAuthenticated()) {
     res.render('profile', { user: req.user });
   } else {
-    res.redirect('/');
+    res.redirect('/login');
   }
 });
 
